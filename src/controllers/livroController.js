@@ -33,7 +33,7 @@ class LivroContoller {
         ...novoLivro,
         autor: { ...autorEncontrado._doc },
       };
-      const livroCriado = await livro.create(livroCompleto);
+      const livroCriado = await Livro.create(livroCompleto);
       res
         .status(201)
         .json({ message: "Criado com sucesso!", livro: novoLivro });
